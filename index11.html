@@ -5,22 +5,38 @@
 <body>
     <h1>JavaScript first class function</h1>
     <script> 
-       //function statement
+
+    
+       //function statement aka function declaration
        function a(){
            console.log("a is called");
        }
 
        //function expression
-       var b = function(){
-           console.log("b is called");
-       }
-       a();
-        b();
+    //    var b = function(){
+    //        console.log("b is called");
+    //    }
+    //    a();
+    //    b();
+    //    xyz();
 
         //anonymous function
-        var c = function(){
+        // function(){
             
+        // }
+
+        //named function expression
+        
+        // first class funtions
+        var b = function(param1) {
+            return function xyz(){
+
         }
+    }
+        console.log(b());
+
+      
+
     </script>
 </body>
 </html>
