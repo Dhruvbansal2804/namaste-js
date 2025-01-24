@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript scope chain</h1>
+    <script>
+        
+    function a() {
+        c();
+        function c() {
+            console.log(b);
+        }
+
+    }
+    var b = 10;
+    a();
+    </script>
+</body>
+</html>
