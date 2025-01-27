@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript callback function</h1>
+    <script> 
+    // what is callback function?
+    // function which is passed as an argument to another function is called callback function
+    setTimeout(function(){
+        console.log("setTimeout is called");
+    }, 5000);
+
+    function x(y){
+        console.log("x is called");
+        y();
+    }
+    x(function(){
+        console.log("y is called");
+    });
+
+
+
+    </script>
+</body>
+</html>
