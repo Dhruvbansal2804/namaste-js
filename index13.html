@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript callback function event listener</h1>
+    <button id="clickMe">Click Me</button>
+    <script> 
+   //event listener
+
+   function attachEventListener(){
+    let count = 0;
+    document.getElementById("clickMe").addEventListener("click", function xyz() {
+        console.log("Button is clicked", count++);
+    });
+}
+attachEventListener();
+
+    </script>
+</body>
+</html>
