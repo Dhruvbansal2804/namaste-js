@@ -3,14 +3,16 @@
     <title>JavaScript</title>
 </head>
 <body>
-    <h1>JavaScript event loop 1</h1>
+    <h1>JavaScript event loop 2</h1>
     <script> 
-   console.log("Start");
+    console.log("Start");
+    document.getElementById("btn")
+    .addEventListener("click", function cb() {
+        console.log("Callback");
+    });
 
-    setTimeout(function cb() {
-         console.log("Callback");
-    }, 5000);   
     console.log("End");
+   
     </script>
 </body>
 </html>
