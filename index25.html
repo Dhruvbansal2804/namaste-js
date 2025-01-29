@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>JavaScript promise chaining</h1>
+    <script>
+        const cart = ["shoes", "watch", "laptop"];
+        
+        createOrder(cart, function(orderId) {
+            proceedToPayment(orderId, function (paymentId) {
+                showOrderSummary(paymentId, function() {
+                    updateWallet();
+                });
+            });
+        });
+
+        createOrder(cart)
+        .then(function(orderId) {
+            return proceedToPayment(orderId);
+        })
+        .then(function(paymentId) {
+            return showOrderSummary(paymentId);
+        })
+        .then(function() {
+            return updateWallet();
+        });
+    </script>
+</body>
+
+</html>

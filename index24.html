@@ -5,28 +5,25 @@
 </head>
 
 <body>
-    <h1>JavaScript promise chaining</h1>
+    <h1>JavaScript promises</h1>
     <script>
-        const cart = ["shoes", "watch", "laptop"];
+        // const cart = ["shoes", "watch", "laptop"];
         
-        createOrder(cart, function(orderId) {
-            proceedToPayment(orderId, function (paymentId) {
-                showOrderSummary(paymentId, function() {
-                    updateWallet();
-                });
-            });
-        });
+        // createOrder(cart, function(orderId) {
+        //     proceedToPayment(orderId);
+        // });
 
-        createOrder(cart)
-        .then(function(orderId) {
-            return proceedToPayment(orderId);
-        })
-        .then(function(paymentId) {
-            return showOrderSummary(paymentId);
-        })
-        .then(function() {
-            return updateWallet();
-        });
+
+
+        // const promise = creteOrder(cart);
+
+        // promise.then(function (orderId) {
+        //     proceedToPayment(orderId);
+        // });
+
+        const GITHUB_API = "https://api.github.com/users";
+        const user = fetch(GITHUB_API)
+        console.log(user);
     </script>
 </body>
 

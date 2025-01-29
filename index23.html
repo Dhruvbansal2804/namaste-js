@@ -5,25 +5,21 @@
 </head>
 
 <body>
-    <h1>JavaScript promises</h1>
+    <h1>JavaScript callback hell</h1>
     <script>
-        // const cart = ["shoes", "watch", "laptop"];
-        
-        // createOrder(cart, function(orderId) {
-        //     proceedToPayment(orderId);
-        // });
+        const cart = ["shoes", "watch", "laptop"];
 
-
-
-        // const promise = creteOrder(cart);
-
-        // promise.then(function (orderId) {
-        //     proceedToPayment(orderId);
-        // });
-
-        const GITHUB_API = "https://api.github.com/users";
-        const user = fetch(GITHUB_API)
-        console.log(user);
+        api.creatOrder(cart, function() {
+            
+            api.proceedToPayment(function() {
+                
+                api.showOrderSummary(
+                    
+                    function() {
+                        api.updateWallet()
+                });
+            });
+        });
     </script>
 </body>
 
