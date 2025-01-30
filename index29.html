@@ -1,0 +1,43 @@
+<!-- what is async?
+what is await?
+how async await works vehind the scenes
+examples of async/await 
+error handlinginterviews
+async await vs promis.then/.catch  -->
+
+<!DOCTYPE html>
+
+<head>
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>JavaScript async await</h1>
+    <script>
+        const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promise resolved');
+    }, 10000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promise resolved');
+    }, 20000);
+});
+
+
+async function handlePromise() {
+    console.log("hello world");
+    const val = await p1;
+    console.log("namaste js1");
+    console.log(val);
+
+    const val2 = await p2;
+    console.log("namaste js2");
+    console.log(val2);
+}
+handlePromise();
+    </script>
+</body>
+</html>
