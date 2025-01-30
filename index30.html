@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>JavaScript</title>
+    
+</head>
+
+<body>
+    <h1>JavaScript this keyword</h1>
+    <button onclick="alert(this)">Click Me</button>
+    <script>
+        console.log(this);
+        function x() {
+            console.log(this);
+        }
+
+        x();
+        window.x();
+
+        //inside obj method
+        const student ={
+            name: "Dhruv",
+            printName: function() {
+                console.log(this.name);
+            }
+        };
+
+        obj.x();
+        
+
+        const student2 = {
+            name: "akshay",
+        };
+        
+
+    // call apply bind
+    student.printName.call(student2);
+
+
+
+    </script>
+</body>
+</html>
