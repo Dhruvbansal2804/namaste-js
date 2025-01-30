@@ -27,6 +27,11 @@
         .then(function() {
             return updateWallet();
         });
+        //same thing with arrow function
+        createOrder(cart)
+        .then(orderId => proceedToPayment(orderId))
+        .then(paymentId => showOrderSummary(paymentId))
+        .then(() => updateWallet());
     </script>
 </body>
 
