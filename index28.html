@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>JavaScript promise api</h1>
+    <script>
+        const p1 = new Promise((resolve, reject) => {
+            setTimeout(() => resolve("P1 success"), 3000);
+        });
+        const p2 = new Promise((resolve, reject) => {
+            // setTimeout(() => resolve("P2 success"), 1000);
+            setTimeout(() => reject("P2 failed"), 2000);
+        });
+        const p3 = new Promise((resolve, reject) => {
+            setTimeout(() => resolve("P3 success"), 2000);
+        });
+
+        Promise.all([p1, p2, p3])
+        .then((result) => {
+            console.log(result);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    </script>
+</body>
+
+</html>
