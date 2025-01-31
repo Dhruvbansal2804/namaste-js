@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>JavaScript</title>
+    
+</head>
+
+<body>
+    <h1>JavaScript call bind and apply</h1>
+   
+    <script>
+      let name = {
+            firstName: "Dhruv",
+            lastName: "Bansal",
+      }
+        let printFullName = function(hometown, state) {
+            console.log(this.firstName + " " + this.lastName + " from " + hometown + " , " + state);
+            
+      }
+      printFullName.call(name, "Delhi", "Delhi");
+
+      let name2 = {
+          firstName: "Akshay",
+          lastName: "Kumar",
+      }
+
+      //function borrowing
+      printFullName.call(name2, "Mumbai", "Maharashtra")
+      printFullName.apply(name2, ["Mumbai", "Maharashtra"])
+
+      //bind method
+      let printMyName = printFullName.bind(name2, "Mumbai", "Maharashtra");
+      console.log(printMyName);
+      printMyName();
+    </script>
+</body>
+</html>
